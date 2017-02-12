@@ -1,0 +1,106 @@
+{
+  "user_details": {
+    "name" : "Joshua Miller",
+    "age": "28",
+    "phone": "0547875269",
+    "addresses": [
+      {
+        "street": "Ridgeway",
+        "number": "51",
+        "city": "London",
+        "country": "UK",
+        "zip": "NW115LJ"
+      },
+      {
+        "street": "Dolev",
+        "number": "638",
+        "city": "Leshem",
+        "country": "Israel",
+        "zip": "71900"
+      }
+    ],
+    "working_places": [
+      {
+        "name": "Idingo",
+        "position": "Fullstack Developer",
+        "city": "Modiin",
+        "start_year": "2014",
+        "end_year": "2016"
+      },
+      {
+        "name": "Digle",
+        "position": "Frontend Developer",
+        "city": "Jerusalem",
+        "start_year": "2016",
+        "end_year": "2017"
+      }
+    ],
+    "images": [
+      {
+        "name":"img_001",
+        "url":"http://i.imgur.com/Hb784JA.jpg"
+      },
+      {
+        "name":"img_002",
+        "url":"http://i.imgur.com/H5bO7uv.jpg"
+      }
+    ]
+  },
+  "user_activity":{
+    "posts": {
+      "count": "10",
+      "titles": [
+        "My first post",
+        "My second post",
+        "My third post",
+        "My fourth post",
+        "My fifth post",
+        "My sixth post",
+        "My seventh post",
+        "My eighth post",
+        "My ninth post",
+        "My tenth post"
+      ]
+    },
+    "likes": {
+      "count": "8",
+      "links": [
+        "http://lmgtfy.com/?q=my+first+like",
+        "http://lmgtfy.com/?q=my+second+like",
+        "http://lmgtfy.com/?q=my+third+like",
+        "http://lmgtfy.com/?q=my+fourth+like",
+        "http://lmgtfy.com/?q=my+fifth+like",
+        "http://lmgtfy.com/?q=my+sixth+like",
+        "http://lmgtfy.com/?q=my+seventh+like",
+        "http://lmgtfy.com/?q=my+eighth+like"
+      ]
+    }
+  },
+  "user_friends": [
+    {
+      "image": "http://esq.h-cdn.co/assets/15/51/980x490/landscape-1450137389-john-cleese.JPG",
+      "name": "Monty Python",
+      "username": "monty_python"
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Jonathan_G_Meath_portrays_Santa_Claus.jpg/220px-Jonathan_G_Meath_portrays_Santa_Claus.jpg",
+      "name": "Santa Claus",
+      "username": "santa_man"
+    },
+    {
+      "image": "http://www.iloveindia.com/indian-heroes/pics/mother-teresa.jpg",
+      "name": "Mother Teresa",
+      "username": "mother_t"
+    },
+    {
+      "image": "http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2012/9/27/1348769776717/8e06327e-8348-4907-affe-f82bb19b50ed-460.jpeg",
+      "name": "Benjamin Netanyahu",
+      "username": "bibi"
+    },
+    {
+      "image": "https://s-media-cache-ak0.pinimg.com/originals/8f/df/7f/8fdf7f0d02ae3e73044e891bd8ac09cf.jpg",
+      "name": "Maggie Thatcher",
+      "username": "iron_lady"
+    }
+  ]
+}

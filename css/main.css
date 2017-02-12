@@ -1,0 +1,57 @@
+#user_details,
+#user_posts,
+#user_friends {
+    overflow: auto;
+}
+.tab_title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.tab_box {
+    margin-bottom: 10px;
+    clear: both;
+    float: left;
+}
+.user_address, .user_work {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.address_number, .work_number {
+    float: left;
+    margin-right: 5px;
+}
+.address_details, .work_details {
+    float: left;
+}
+.user_image {
+    float: left;
+    margin-right: 20px;
+}
+.user_image_wrapper{
+    width:150px;
+    height:150px;
+}
+.user_image_wrapper img{
+    max-width: 100%;
+    max-height: 100%;
+}
+#posts_box{
+    margin-bottom: 20px;
+}
+#user_friends{
+    text-align: center;
+}
+.user_friend {
+    display: inline-block;
+    margin: 10px;
+}
+.user_friend_image {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    border-radius: 200px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}

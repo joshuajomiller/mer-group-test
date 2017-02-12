@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mer Group Test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body ng-app="mer-group-test" ng-cloak>
+        <div id="tabs" ng-controller="loadDataCtrl">
+            <ul>
+                <li><a href="#user_details">Details</a></li>
+                <li><a href="#user_posts">Posts</a></li>
+                <li><a href="#user_friends">Friends</a></li>
+            </ul>
+            <div id="user_details">
+                <div class="tab_box">
+                    <span class="tab_title">Name </span>
+                    <span ng-bind="userData.user_details.name ? userData.user_details.name : 'Unknown'"></span>
+                </div>
+                <div class="tab_box">
+                    <span class="tab_title">Age </span>
+                    <span ng-bind="userData.user_details.age ? userData.user_details.age : 'Unknown'"></span>
+                </div>
+                <div class="tab_box">
+                    <span class="tab_title">Phone </span>
+                    <span ng-bind="userData.user_details.phone ? userData.user_details.phone : 'Unknown'"></span>
+                </div>
+                <div class="tab_box">
+                    <div class="tab_title">Addresses </div>
+                    <div ng-repeat="address in userData.user_details.addresses" class="user_address">
+                        <div class="address_number" ng-hide="userData.user_details.addresses.length == 1">
+                            <span>{{$index + 1}}</span>.
+                        </div>
+                        <div class="address_details">
+                            <span ng-bind="address.number"></span> <span ng-bind="address.street"></span><br>
+                            <span ng-bind="address.city"></span><br>
+                            <span ng-bind="address.country"></span><br>
+                            <span ng-bind="address.zip"></span>
+                        </div>
+                    </div>
+                    <div ng-hide="userData.user_details.addresses.length">No addresses found</div>
+                </div>
+                <div class="tab_box">
+                    <div class="tab_title">Working Places </div>
+                    <div ng-repeat="work in userData.user_details.working_places" class="user_work">
+                        <div class="work_number" ng-hide="userData.user_details.working_places.length == 1">
+                            <span>{{$index + 1}}</span>.
+                        </div>
+                        <div class="work_details">
+                            <span ng-bind="work.name"></span><br>
+                            <span ng-bind="work.position"></span><br>
+                            <span ng-bind="work.city"></span><br>
+                            <span ng-bind="work.start_year"></span> - <span ng-bind="work.end_year"></span>
+                        </div>
+                    </div>
+                    <div ng-hide="userData.user_details.working_places.length">No work places found</div>
+                </div>
+                <div class="tab_box">
+                    <div class="tab_title">Images </div>
+                    <div ng-repeat="image in userData.user_details.images" class="user_image">
+                        <div ng-bind="image.name" class="user_image_name"></div>
+                        <div class="user_image_wrapper">
+                            <a href="{{image.url}}" target="_blank">
+                                <img ng-src="{{image.url}}">
+                            </a>
+                        </div>
+                    </div>
+                    <div ng-hide="userData.user_details.images.length">No images found</div>
+                </div>
+            </div>
+            <div id="user_posts">
+                <div class="tab_box">
+                    <span class="tab_title">Posts: </span>
+                    <span ng-bind="userData.user_activity.posts.count"></span>
+                </div>
+                <div class="tab_box" id="posts_box" ng-show="userData.user_activity.posts.titles.length">
+                    <div class="tab_title">Post Titles </div>
+                    <div ng-repeat="title in userData.user_activity.posts.titles" ng-bind="title"></div>
+                </div>
+                <div class="tab_box">
+                    <span class="tab_title">Likes: </span>
+                    <span ng-bind="userData.user_activity.likes.count"></span>
+                </div>
+                <div class="tab_box" ng-show="userData.user_activity.likes.links.length">
+                    <div class="tab_title">Liked Pages </div>
+                    <div ng-repeat="link in userData.user_activity.likes.links">
+                        <a href="{{link}}" target="_blank">{{link}}</a>
+                    </div>
+                </div>
+            </div>
+            <div id="user_friends">
+                <div ng-repeat="friend in userData.user_friends" class="user_friend">
+                    <div class="user_friend_image" style="background-image: url('{{friend.image}}')"></div>
+                    <div>
+                        <span class="tab_title">Name </span>
+                        <span ng-bind="friend.name" class="user_friend_name"></span>
+                    </div>
+                    <div>
+                        <span class="tab_title">Username </span>
+                        <span ng-bind="friend.username"></span>
+                    </div>
+                </div>
+                <div ng-hide="userData.user_friends.length">No friends found</div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
